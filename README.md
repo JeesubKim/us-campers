@@ -11,4 +11,55 @@ This web site is to relay the people who want to purchase and who want to sell.
 # Stack
 - MSA architecture using docker and k8s
 - Fast API for API server
-- Kafka for event bus
+- NATS for event bus
+- mongodb for db
+- redis for caching order and expire it!
+
+# Resources
+## user
+
+## ticket
+
+## order
+
+## payment
+
+# Services
+
+## auth
+User related service
+
+## tickets
+CRUD of Camping tickets
+
+## orders
+CRUD of order
+
+## expiration
+watches for orders to be created, cancels them after certain period times (30min)
+
+## payments
+handles credit card payments. Cancels orders if payment fails, completes if payment succeeds
+
+
+# events
+
+## User
+
+- UserCreated
+- UserUpdated
+
+## Order
+
+- OrderCreated
+- OrderCancelled
+- OrderExpired
+
+## Ticket
+
+- TicketCreated
+- TicketUpdated
+
+## ChargeCreated
+
+- ChargeCreated
