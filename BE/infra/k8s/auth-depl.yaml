@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: gshopping/auth
+          image: us.gcr.io/uscampers-dev/auth
 ---
 apiVersion: v1
 kind: Service

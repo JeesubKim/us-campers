@@ -5,10 +5,12 @@ deploy:
     manifests:
       - ./infra/k8s/*
 build:
-  local:
-    push: false
+  # local:
+  #   push: false
+  googleCloudBuild:
+    projectId: uscampers-dev
   artifacts:
-    - image: gshopping/auth
+    - image: us.gcr.io/uscampers-dev/auth
       context: auth
       docker:
         dockerfile: Dockerfile
